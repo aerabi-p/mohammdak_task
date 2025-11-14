@@ -1,4 +1,3 @@
-user_input = input('please enter your answer: ')
 print(user_input)
 point = 0
 def reward(user_input, correct_answer):
