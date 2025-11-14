@@ -1,4 +1,3 @@
-import numpy as np
 
 def correct_answer_generator():
     prob=np.random.uniform()
@@ -23,5 +22,28 @@ def gazing(correct_answer):
         else:
             print("green")
             return "green"
-    
+        
+user_input = input('please enter your answer: ')
+print(user_input)
+point = 0
+def reward(user_input, correct_answer):
+
+    if user_input == 'r':
+        if correct_answer == 'green':
+            print('Well done')
+            return 1
+        else:
+            print('Try harder')
+            return 0
+
+    if user_input == 'l':
+        if correct_answer == 'blue':
+            print('Well done')
+            return 1
+        else:
+            print('Try harder')
+            return 0
+
+point += reward(user_input, 'green')
+print(point)
         
